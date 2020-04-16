@@ -1,11 +1,10 @@
 "use strict";
-console.log(---task-3---)
 const total = 100;
-const ordered = 80;
+const ordered = 110;
 let result;
-if (ordered >= total) {
-  result = `На складе недостаточно товаров!`;
-} else {
+if (ordered <= total) {
   result = `Заказ оформлен, с вами свяжется менеджер`;
+} else {
+  result = `На складе недостаточно товаров!`;
 }
 console.log(result);

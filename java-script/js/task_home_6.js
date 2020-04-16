@@ -1,15 +1,17 @@
 "use strict";
-let total = Number("0");
-let input;
+let total = 0;
+let input; // undefenid
+let message;
 
-while (input == 0 || input == "") {
+while (input !== null) {
+  // true 7-14 false 15
   input = prompt(`Введите число`, 0);
+  let numbervalue = Number(input);
+  if (isNaN(numbervalue)) {
+    message = "Вы ввели не число";
+    alert(message);
+    break;
+  }
+  total += numbervalue;
 }
-
-while (true) {
-  input = +prompt(`Введите число`, 0);
-  if (!input) break;
-  total += input;
-}
-
-alert(`Oбщая сумма чисел равна ` + total);
+alert(`Общая сумма равна ${total}`);

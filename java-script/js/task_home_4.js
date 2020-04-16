@@ -1,11 +1,12 @@
 "use strict";
 const credits = 23580;
 const pricePerDroid = 3000;
-const numberPerDroid = prompt(`Order Droid`);
+const stringPerDroid = prompt(`Order Droid`);
+const numberPerDroid = +stringPerDroid;
 let totalPrice = numberPerDroid * pricePerDroid;
 let balanceСredit = credits - totalPrice;
 let message;
-if (numberPerDroid === null) {
+if (stringPerDroid === null) {
   message = "Отменено пользователем!";
 } else if (totalPrice < credits) {
   message = `Вы купили ${numberPerDroid} дроидов, на счету осталось ${balanceСredit} кредитов`;
